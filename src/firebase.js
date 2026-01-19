@@ -4,15 +4,15 @@ import { getAuth } from 'firebase/auth'
 import { getStorage } from 'firebase/storage'
 import { getAnalytics } from 'firebase/analytics'
 
-// Firebase 설정
+// Firebase 설정 (환경변수 사용)
 const firebaseConfig = {
-  apiKey: 'AIzaSyDbjh4H2lPMM45IHj7QPEDjLJ8W0FIHofY',
-  authDomain: 'just-clock-p.firebaseapp.com',
-  projectId: 'just-clock-p',
-  storageBucket: 'just-clock-p.firebasestorage.app',
-  messagingSenderId: '1054107518490',
-  appId: '1:1054107518490:web:c663b9c4a1c5042a39b3a3',
-  measurementId: 'G-0WER9W8F08'
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 }
 
 // Firebase 초기화
